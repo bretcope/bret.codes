@@ -1,0 +1,13 @@
+# Site settings
+title: bret.codes
+description: >
+  Open source blog by Bret Copeland, a software developer at Stack Overflow / Stack Exchange.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://bret.codes" # the base hostname & protocol for your site
+twitter_username: bretcope
+github_username:  bretcope
+
+highlighter: rouge
+
+# Build settings
+markdown: kramdown
