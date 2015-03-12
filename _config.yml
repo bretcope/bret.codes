@@ -7,7 +7,7 @@ url: "http://bret.codes" # the base hostname & protocol for your site
 twitter_username: bretcope
 github_username:  bretcope
 
-highlighter: rouge
+highlighter: pygments
 
 # Build settings
 markdown: kramdown
