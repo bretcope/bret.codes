@@ -6,7 +6,7 @@ date: 2015-03-12 05:49:00
 
 I have no idea what I'm doing.
 
-That statement seemed important enough to stand on it's own. I typed it out with the intention of describing that this blog is running on [Jekyll](http://jekyllrb.com/) which runs on [Ruby](https://www.ruby-lang.org) (I both loathe and don't understand Ruby - possibly related), and my aim is to learn as little of both as necessary to run this blog. But, I realized that "I have no idea what I'm doing" pretty well sums up how I feel about programming.
+That statement seemed important enough to stand on it's own. I typed it out with the intention of describing that this blog is running on [Jekyll](http://jekyllrb.com/) which runs on [Ruby](https://www.ruby-lang.org) (I loathe and don't understand Ruby - possibly related facts), and my aim is to learn as little of both as necessary to run this blog. But, I realized that "I have no idea what I'm doing" pretty well sums up how I feel about programming.
 
 I don't mean I feel incompetent. I have a sense of direction, and I often make good choices, but those are essentially gut feelings. I think many people (even developers) believe programming is all logical, that we come to very methodical conclusions, and a solution can be objectively rated better or worse than any other solution. I've been developing for about 11 years, most of that time professionally, and I'm pretty sure most of what I do is intuition-based.
 
