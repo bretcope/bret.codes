@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Initial Commit"
+excerpt: "Using our emotions to write code."
+tags: [emotions, logic, programming]
 date: 2015-03-12 05:49:00
+comments: true
 ---
 
 I have no idea what I'm doing.

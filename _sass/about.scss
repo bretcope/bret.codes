@@ -1,0 +1,16 @@
+
+.about-section
+{
+	@include container;
+	@include clearfix;
+	@media #{$micro} {
+		.section-icon
+		{
+			@include grid(12, 3);
+		}
+		.section-text
+		{
+			@include grid(12, 9);
+		}
+	}
+}
