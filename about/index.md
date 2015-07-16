@@ -13,9 +13,9 @@ I'm a self-taught programmer with a degree in film production. I used to live in
     <img src="/images/so-icon.png" style="width:110px; height:110px;">
   </div>
   <div class="section-text">
-    <h2>I work at <a href="http://stackexchange.com">Stack Exchange</a> / <a href="http://stackoverflow.com">Stack Overflow</a></h2>
+    <h2>I work at Stack Overflow</h2>
     <p>
-      You know, the site where you get all your programming questions answered (<a href="http://stackoverflow.com">stackoverflow.com</a>). I'm the team-lead/developer on our Ad Server team. If for some reason this blog makes me sound like an interesting person to work with, <a href="http://careers.stackoverflow.com/jobs/62162/ad-server-technology-developer-stack-exchange">we're hiring for my team</a>, and we'd love you to apply!
+      You know, the site where you get all your programming questions answered (<a href="http://stackoverflow.com">stackoverflow.com</a>). I'm a developer and team-lead on our Ad Server team. If for some reason this blog makes me sound like an interesting person to work with, <a href="http://careers.stackoverflow.com/jobs/62162/ad-server-technology-developer-stack-exchange">we're hiring for my team</a>, and we'd love you to apply!
     </p>
   </div>
 </div>
@@ -66,7 +66,7 @@ I'm a self-taught programmer with a degree in film production. I used to live in
   <div class="section-text">
     <h2>Let's play some songs</h2>
     <p>
-      I keep guitars in my office, and other music-inclined Stackers (yeah, that's what we call people who work at Stack Exchange) come by and play occasionally. One time I recorded some videos of me playing in my office and put them <a href="https://www.youtube.com/channel/UCP7uZX8WcqhM_KjAyX3v9Mw">on youtube</a>. Perhaps I'll do more of that in the future.
+      I keep guitars in my office, and other music-inclined Stackers (yeah, that's what we call people who work at Stack Overflow) come by and play occasionally. One time I recorded some videos of me playing in my office and put them <a href="https://www.youtube.com/channel/UCP7uZX8WcqhM_KjAyX3v9Mw">on youtube</a>. Perhaps I'll do more of that in the future.
     </p>
     <p>
       Biggest thing I miss about living in New York is having a piano in my house, and being able to scream out songs at three in the morning.
