@@ -11,7 +11,7 @@ $doc-line-height: 26;
 $paragraph-indent: false;
 $base-font: 'PT Serif', serif;
 $heading-font: 'PT Sans Narrow', sans-serif;
-$code-font: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+$code-font: Consolas, "DejaVu Sans Mono", monospace;
 $alt-font: $base-font;
 
 /* 
@@ -29,6 +29,7 @@ $bordercolor    : $basecolor;
 $white          : #fff;
 $black          : #111;
 $accentcolor    : $black;
+$codecolor      : #efefef;
 
 /* buttons */
 $primary			: $black;

@@ -131,7 +131,8 @@ blockquote {
    ========================================================================== */
 
 p {
-	margin: 0 0 $indent-var;
+	margin-bottom: $indent-var;
+//	margin: 0 0 $indent-var;
 	// sibling indentation
   @if $paragraph-indent == true {
     & + p {
@@ -141,17 +142,21 @@ p {
 	}
 }
 
+article.post p {
+	margin-top: $indent-var;
+}
+
 /* 
    Code snippets
    ========================================================================== */
 
 tt, code, kbd, samp, pre {
 	font-family: $code-font;
+	//font-size: 1.2em;
 }
-p,
-li { 
+p { 
 	code {
-		@include font-rem(12);
+		@include font-rem(13);
 		line-height: 1.5;
 		white-space: nowrap;
 		margin: 0 2px;
@@ -162,7 +167,7 @@ li {
 	}
 }
 pre {
-	@include font-rem(12);
+	@include font-rem(14);
 	line-height: 1.5;
 	overflow-x: auto;
 }
