@@ -74,4 +74,4 @@ I'm a self-taught programmer with a degree in film production. I used to live in
   </div>
 </div>
 
-I also have a [non-technical blog](http://bretcope.blogspot.com/) which almost never gets updated.
+I also have a [non-technical blog](http://bretcope.blogspot.com/) where I write about [elevators](http://bretcope.blogspot.com/2014/02/i-have-favorite-elevator.html) and [visiting Russia](http://bretcope.blogspot.com/2015/04/a-night-in-moscow.html).
