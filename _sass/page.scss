@@ -19,27 +19,22 @@ body {
 	font-weight: 700;
 	text-transform: uppercase;
 	@include clearfix;
+	@media #{$small} {
+		@include prefix(12,0.5);
+		@include font-rem(16);
+	}
+	@media #{$x-large} {
+		@include prefix(12,2);
+	}
 }
 
 /* Site name */
 .site-name {
-	@include grid(12,10);
-	@include prefix(12,1);
-	@include suffix(12,1);
-//	margin-bottom: 1em;
-	float: none;
+	float: left;
 	display: block;
 	@include font-rem(24);
-	@media #{$small} {
-		@include grid(12,2);
-		@include prefix(12,0.5);
-		@include suffix(12,0.5);
-		@include font-rem(16);
-	}
-	@media #{$x-large} {
-		@include grid(12,1.5);
-		@include prefix(12,2);
-	}
+	margin-right: 40px;
+	width: 200px;
 	
 	> a
 	{
@@ -55,19 +50,10 @@ body {
 /* Top navigation links */
 .top-navigation {
 	@include grid(12,10);
-	@include prefix(12,1);
-	@include suffix(12,1);
 	margin-bottom: 1em;
-	float: none;
+	float: left;
 	display: block;
-	@media #{$small} {
-		@include grid(12,9);
-		@include prefix(12,0);
-		@include suffix(12,0);
-	}
-	@media #{$x-large} {
-		@include grid(12,8);
-	}
+	width: 300px;
 	ul {
 		margin: 0;
 		padding: 0;
