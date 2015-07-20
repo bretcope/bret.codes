@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Schyntax Part 1: The Language"
-excerpt: "A domain specific language for defining scheduled tasks in a terse, but readable, format."
+excerpt: "Domain specific language for defining scheduled tasks in a terse, but readable, format."
 tags: [schyntax, programming]
 date: 2015-07-20
 comments: true

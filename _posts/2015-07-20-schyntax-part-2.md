@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Schyntax Part 2: The Task Runner (aka \"Schtick\")"
-excerpt: "A scheduled task runner built on Schyntax."
+excerpt: "Scheduled task runner built on Schyntax."
 tags: [schyntax, programming]
 date: 2015-07-20
 comments: true
