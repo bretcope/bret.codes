@@ -37,7 +37,7 @@ That's it. Pretty simple, right?
 
 You can stop the task using `task.stopSchedule()`, and resume it again using `task.startSchedule()`, or update the schedule to run every 30 seconds using `task.updateSchedule('seconds(*%30)')`.
 
-For asynchronous task callbacks, use `.addAsyncTask()`
+For asynchronous task callbacks, use `.addAsyncTask()` which provides a third `done` argument to the callback:
 
 {% highlight javascript %}
 var task = schtick.addAsyncTask('name', 'min(*)', function (task, eventTime, done) {
