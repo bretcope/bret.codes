@@ -124,7 +124,7 @@ var callback = wrapper.WrapAsync(async (task, time) => await DoSomethingAsync())
 
 There's one last real-world scenario to address. Imagine we have a task set to run every hour at the top of the hour, but the app re-deploys at 11:59:59 and is down for three seconds. In most cases, we'd like the task to run right away when the app comes back online, rather than waiting until the next hour.
 
-To make this work, we need two pieces of information: 1. when did the task run last ("last run"), and 2. how long after it was _supposed_ to have run should we consider running it immediately vs waiting for the next scheduled time ("task window").
+To make this work, we need two pieces of information: 1. when did the task run last ("last known event"), and 2. how long after it was _supposed_ to have run should we consider running it immediately vs waiting for the next scheduled time ("task window").
 
 Luckily, if you're using Schtick.Redis, it already stores the last run information for you. You can retrieve it like this:
 
@@ -139,7 +139,7 @@ schtick.AddAsyncTask("task-name",
                     "hour(*)",
                     wrapper.Wrap((task, time) => DoSomething()),
                     window: TimeSpan.FromMinutes(30),
-                    lastKnownRun: info.ScheduledTime);
+                    lastKnownEvent: info.ScheduledTime);
 {% endhighlight %}
 
 > If you've never run the task before, `info.ScheduledTime` will be `default(DateTimeOffset)` which tells Schtick "I have no information to give you." Therefore, there's no need to special case the first run of a task.
