@@ -121,8 +121,8 @@ Schyntax for .NET is available on nuget.org. [![NuGet version](https://badge.fur
 using Schyntax;
 
 var sch = new Schedule("min(*%2)"); // create Schedule object
-var events = new List<DateTime>();
-var d = DateTime.UtcNow; // start from right now
+var events = new List<DateTimeOffset>();
+var d = DateTimeOffset.UtcNow; // start from right now
 for (var i = 0; i < 5; i++)
 {
     d = sch.Next(d); // get next event time after the `d` Date argument

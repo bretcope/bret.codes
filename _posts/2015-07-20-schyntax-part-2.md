@@ -20,27 +20,47 @@ There's no reason you couldn't develop your own task runner... if you want to. T
 [![npm version](https://badge.fury.io/js/schtick.svg)](http://badge.fury.io/js/schtick)
 
 {% highlight javascript %}
-var schtick = require('schtick');
+var Schtick = require('schtick');
 
-var s = schtick('minutes(*)', function (timeIntendedToRun) {
-  // code to run every minute
+var schtick = new Schtick(); // best practice is to keep a singleton Schtick instance
+
+// setup an exception handler so we know when tasks blow up
+schtick.addErrorHandler(function (task, error) { /* error handling code */ });
+
+// add a task which will call DoSomeTask every minute
+var task = schtick.addTask('unique name', 'minutes(*)', function (task, eventTime) {
+  DoSomeTask();
 });
 {% endhighlight %}
 
 That's it. Pretty simple, right?
 
-You can stop the task using `s.stop()`, and resume it again using `s.stop()`. Complete documentation of the JavaScript Schtick can be found on [its GitHub page](https://github.com/schyntax/js-schtick).
+You can stop the task using `task.stopSchedule()`, and resume it again using `task.startSchedule()`, or update the schedule to run every 30 seconds using `task.updateSchedule('seconds(*%30)')`.
+
+For asynchronous task callbacks, use `.addAsyncTask()`
+
+{% highlight javascript %}
+var task = schtick.addAsyncTask('name', 'min(*)', function (task, eventTime, done) {
+  // make sure you call the `done` function when your async operations have all completed
+  setImmediate(function () {
+    // done with everything
+    done(); // you can pass an error as the first argument of done, if applicable
+  });
+});
+{% endhighlight %}
+
+Complete documentation of the JavaScript Schtick can be found on [its GitHub page](https://github.com/schyntax/js-schtick).
 
 ### C\#
 
 [![NuGet version](https://badge.fury.io/nu/Schtick.Redis.svg)](http://badge.fury.io/nu/Schtick.Redis)
 
-The C# API is a little bit different.
+The C# API is very similar.
 
 {% highlight csharp %}
 using Schyntax;
 
-var schtick = new Schtick(); // best practice is to create a singleton of Schtick 
+var schtick = new Schtick(); // best practice is to keep a singleton Schtick instance
 
 // setup an exception handler so we know when tasks blow up
 schtick.OnTaskException += (task, exception) => LogException(ex);
@@ -57,9 +77,9 @@ For asynchronous task callbacks, use `Schtick.AddAsyncTask()`:
 schtick.AddAsyncTask("name", "min(*)", async (task, time) => await DoSomethingAsync());
 {% endhighlight %}
 
-> The first argument to `.AddTask()` is the name of the task. This name must be unique among all tasks, and will help you identify them easier when debugging. If you're staunchly against human-readable names, you can pass in `null`, and a GUID will be assigned instead.
-
 Complete documentation of the C# Schtick can be found on [its GitHub page](https://github.com/schyntax/cs-schtick).
+
+> In both implementations, the first argument to `.AddTask()` is the name of the task. This name must be unique among all tasks, and will help you identify them easier when debugging. If you're staunchly against human-readable names, you can pass in `null`, and a GUID will be assigned instead.
 
 ## Distributed Locking via Redis
 
@@ -122,7 +142,7 @@ schtick.AddAsyncTask("task-name",
                     lastKnownRun: info.ScheduledTime);
 {% endhighlight %}
 
-> If you've never run the task before, `info.ScheduledTime` will be `default(DateTime)` which tells Schtick "I have no information to give you." Therefore, there's no need to special case the first run of a task.
+> If you've never run the task before, `info.ScheduledTime` will be `default(DateTimeOffset)` which tells Schtick "I have no information to give you." Therefore, there's no need to special case the first run of a task.
 
 The above code, in plain English, means: "run `DoSomething()` every hour, but if an event gets skipped because the app was down, then run it right away when the app finishes restarting as long as it finishes restarting within 30 minutes of the scheduled event time."
 
