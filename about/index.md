@@ -15,7 +15,7 @@ I'm a self-taught programmer with a degree in film production. I used to live in
   <div class="section-text">
     <h2>I work at Stack Overflow</h2>
     <p>
-      You know, the site where you get all your programming questions answered (<a href="http://stackoverflow.com">stackoverflow.com</a>). I'm a developer and team-lead on our Ad Server team. If for some reason this blog makes me sound like an interesting person to work with, <a href="http://careers.stackoverflow.com/jobs/62162/ad-server-technology-developer-stack-exchange">we're hiring for my team</a>, and we'd love you to apply!
+      You know, the site where you get all your programming questions answered (<a href="http://stackoverflow.com">stackoverflow.com</a>). I'm a developer and team-lead on our Ad Server team. If for some reason this blog makes me sound like an interesting person to work with, <a href="http://stackexchange.com/work-here">we're always hiring</a>, and we'd love you to apply!
     </p>
   </div>
 </div>
